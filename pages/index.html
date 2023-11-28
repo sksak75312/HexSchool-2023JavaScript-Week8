@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <main>
+      <div class="w-full h-10 bg-black"></div>
+
+      <!-- 主視覺 -->
+      <section class="xl:container mt-[31px] mb-15">
+        <div
+          class="flex h-[420px] bg-[url('../assets/images/3ewLAKn.png')] bg-center bg-no-repeat"
+        >
+          <h2 class="text-[32px] text-white ml-13 mb-12 mt-auto">
+            窩窩家居 <br />
+            跟您一起品味生活
+          </h2>
+        </div>
+      </section>
+
+      <!-- 床墊優勢 -->
+      <section class="container mb-15">
+        <h3 class="mb-7 text-center text-28px">床墊優勢</h3>
+        <ul
+          class="flex justify-between items-center flex-wrap lg:flex-nowrap gap-y-8 lg:gap-y-0 md:gap-x-[30px]  text-center"
+        >
+          <li class="w-full lg:w-1/3">
+            <img
+              src="../assets/images/tR426y5.png"
+              class="mb-2 w-full object-cover"
+              alt="原木料環保圖片"
+            />
+            <h4 class="text-xl">原木料環保</h4>
+          </li>
+          <li class="w-full lg:w-1/3">
+            <img
+              src="../assets/images/Fd2MiBb.png"
+              class="mb-2 w-full object-cover"
+              alt="好收納圖片"
+            />
+            <h4 class="text-xl">好收納</h4>
+          </li>
+          <li class="w-full lg:w-1/3">
+            <img
+              src="../assets/images/5n1uTFh.png"
+              class="mb-2 w-full object-cover"
+              alt="好組裝圖片"
+            />
+            <h4 class="text-xl">好組裝</h4>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 家具比較 -->
+      <section class="bg-gray pt-12 pb-16">
+        <h3 class="mb-8 text-28px text-center">家具比較</h3>
+        <div class="container overflow-auto">
+          <table class="w-[730px] mx-auto text-xl text-center ">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="pb-3 font-normal">窩窩系統模組家具</th>
+                <th class="pb-3 font-normal text-[#797979]">組合式家具</th>
+                <th class="pb-3 font-normal text-[#797979]">實木家具</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-y border-gray-300">
+                <td class="py-3 text-left">可單人自行組裝</td>
+                <td>
+                  <span class="material-symbols-outlined text-4xl text-purple-light">
+                    done
+                  </span>
+                </td>
+                <td class="text-base text-[#797979]">
+                  不一定
+                </td>
+              </tr>
+              <tr class="border-b border-gray-300" >
+                <td class="py-3 text-left">可多次重複拆裝</td>
+                <td>
+                  <span class="material-symbols-outlined text-4xl text-purple-light">
+                    done
+                  </span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-300">
+                <td class="py-3 text-left">床墊規格彈性大</td>
+                <td>
+                  <span class="material-symbols-outlined text-4xl text-purple-light">
+                    done
+                  </span>
+                </td>
+                <td class="text-base text-[#797979]">
+                  不一定
+                </td>
+                <td class="text-base text-[#797979]">
+                  不一定
+                </td>
+              </tr>
+              <tr class="border-b border-gray-300">
+                <td class="py-3 text-left">材質可長久使用</td>
+                <td>
+                  <span class="material-symbols-outlined text-4xl text-purple-light">
+                    done
+                  </span>
+                </td>
+                <td>
+                </td>
+                <td>
+                  <span class="material-symbols-outlined text-4xl text-purple-light">
+                    done
+                  </span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-300">
+                <td class="py-3 text-left">小客車即可搬運</td>
+                <td>
+                  <span class="material-symbols-outlined text-4xl text-purple-light">
+                    done
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      <!-- 好評推薦 -->
+      <section class="pt-15 pb-20 bg-purple-dark">
+        <div class="container">
+          <h3 class="mb-8 text-28px text-center text-white">好評推薦</h3>
+          <div class="recommendation overflow-auto xl:overflow-hidden">
+            <ul class="flex gap-[30px] mb-5 ml-24">
+              <li class="shrink-0 flex items-center bg-white w-[350px]">
+                <img src="../assets/images/cXcOLhu.png" class="pointer-events-none" alt="Jodan 雙人床架">
+                <div class="ml-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <img src="../assets//images/I9L7WOr.png" class="pointer-events-none w-10 h-10" alt="王六角個人照片">
+                    <div>
+                      <h4>王六角</h4>
+                      <h5 class="text-purple-light text-sm">Jodan 雙人床架</h5>
+                    </div>
+                  </div>
+                  <p>CP值很高。</p>
+                </div>
+              </li>
+              <li class="shrink-0 flex items-center bg-white w-[350px]">
+                <img src="../assets/images/oJb4G1d.png" class="pointer-events-none" alt="Antony 雙人床架">
+                <div class="ml-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <img src="../assets//images/CUFGfay.png" class="pointer-events-none w-10 h-10" alt="Leaf個人照片">
+                    <div>
+                      <h4>Leaf</h4>
+                      <h5 class="text-purple-light text-sm">Antony 雙人床架</h5>
+                    </div>
+                  </div>
+                  <p>很喜歡～還有送三年保固～</p>
+                </div>
+              </li>
+              <li class="shrink-0 flex items-center bg-white w-[350px]">
+                <img src="../assets/images/3IATkJG.png" class="pointer-events-none" alt="Charles 系列儲物組合">
+                <div class="ml-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <img src="../assets//images/8WwZsLS.png" class="pointer-events-none w-10 h-10" alt="美濃鄧子琪個人照片">
+                    <div>
+                      <h4>美濃鄧子琪</h4>
+                      <h5 class="text-purple-light text-sm">Charles 系列儲物組合</h5>
+                    </div>
+                  </div>
+                  <p>廚房必備美用品！</p>
+                </div>
+              </li>
+              <li class="shrink-0 flex items-center bg-white w-[350px]">
+                <img src="../assets/images/Ps8JKlF.png" class="pointer-events-none" alt="Antony 雙人床架">
+                <div class="ml-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <img src="../assets//images/NycuPVy.png" class="pointer-events-none w-10 h-10" alt="isRaynotArray個人照片">
+                    <div>
+                      <h4>isRaynotArray</h4>
+                      <h5 class="text-purple-light text-sm">Antony 雙人床架</h5>
+                    </div>
+                  </div>
+                  <p>物超所值!</p>
+                </div>
+              </li>
+              <li class="shrink-0 flex items-center bg-white w-[350px]">
+                <img src="../assets/images/xypuv56.png" class="pointer-events-none" alt="Louvre 雙人床架">
+                <div class="ml-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <img src="../assets//images/zdFOQIv.png" class="pointer-events-none w-10 h-10" alt="程鮭魚個人照片">
+                    <div>
+                      <h4>程鮭魚</h4>
+                      <h5 class="text-purple-light text-sm">Louvre 單人床架</h5>
+                    </div>
+                  </div>
+                  <p>租屋用剛剛好</p>
+                </div>
+              </li>
+            </ul>
+            <ul class="flex gap-[30px]">
+              <li class="shrink-0 flex items-center bg-white w-[350px]">
+                <img src="../assets/images/oJb4G1d.png" class="pointer-events-none" alt="Louvre 雙人床架">
+                <div class="ml-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <img src="../assets//images/W7fyzp2.png" class="pointer-events-none w-10 h-10" alt="小杰個人照片">
+                    <div>
+                      <h4>小杰</h4>
+                      <h5 class="text-purple-light text-sm">Louvre 雙人床架</h5>
+                    </div>
+                  </div>
+                  <p>非常舒適，有需要會再回購</p>
+                </div>
+              </li>
+              <li class="shrink-0 flex items-center bg-white w-[350px]">
+                <img src="../assets/images/mjA01Tk.png" class="pointer-events-none" alt="Charles 雙人床架">
+                <div class="ml-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <img src="../assets//images/8O1cOnG.png" class="pointer-events-none w-10 h-10" alt="江八角個人照片">
+                    <div>
+                      <h4>江八角</h4>
+                      <h5 class="text-purple-light text-sm">Charles 雙人床架</h5>
+                    </div>
+                  </div>
+                  <p>品質不錯～</p>
+                </div>
+              </li>
+              <li class="shrink-0 flex items-center bg-white w-[350px]">
+                <img src="../assets/images/qEcZTSa.png" class="pointer-events-none" alt="Antony 床邊桌">
+                <div class="ml-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <img src="../assets//images/C0NDvSA.png" class="pointer-events-none w-10 h-10" alt="juni讚神個人照片">
+                    <div>
+                      <h4>juni讚神</h4>
+                      <h5 class="text-purple-light text-sm">Antony 床邊桌</h5>
+                    </div>
+                  </div>
+                  <p>讚ㄉ！</p>
+                </div>
+              </li>
+              <li class="shrink-0 flex items-center bg-white w-[350px]">
+                <img src="../assets/images/Ed7bxLr.png" class="pointer-events-none" alt="Antony 單人床架">
+                <div class="ml-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <img src="../assets//images/hUsTZDm.png" class="pointer-events-none w-10 h-10" alt="久安說安安個人照片">
+                    <div>
+                      <h4>久安說安安</h4>
+                      <h5 class="text-purple-light text-sm">Antony 單人床架</h5>
+                    </div>
+                  </div>
+                  <p>一個躺剛剛好。</p>
+                </div>
+              </li>
+              <li class="shrink-0 flex items-center bg-white w-[350px]">
+                <img src="../assets/images/kwIRna8.png" class="pointer-events-none" alt="Antony 雙人床架">
+                <div class="ml-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <img src="../assets//images/3ako6QX.png" class="pointer-events-none w-10 h-10" alt="PeiQun個人照片">
+                    <div>
+                      <h4>PeiQun</h4>
+                      <h5 class="text-purple-light text-sm">Antony 雙人床架</h5>
+                    </div>
+                  </div>
+                  <p>睡起來很舒適</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 運送方式 -->
+      <section class="container pt-8 pb-[72px] text-center">
+        <h3 class="mb-8 text-28px">運送方式</h3>
+        <ul class="flex justify-center flex-col md:flex-row gap-16 xl:gap-[90px]">
+          <li class="self-center">
+            <div class="transportAfter relative flex justify-center items-center p-7 mb-2 border-[3px] border-black rounded-full">
+              <span class="material-icons text-6xl">
+                shopping_cart
+              </span>
+            </div>
+            <span class="text-xl">STEP.1</span>
+            <p>選購商品</p>
+          </li>
+          <li class="self-center">
+            <div class="transportAfter relative flex justify-center items-center p-7 mb-2 border-[3px] border-black rounded-full">
+              <span class="material-icons text-6xl">
+                format_list_bulleted
+              </span>
+            </div>
+            <span class="text-xl">STEP.2</span>
+            <p>填寫預定資料</p>
+          </li>
+          <li class="self-center">
+            <div class="transportAfter relative flex justify-center items-center p-7 mb-2 border-[3px] border-black rounded-full">
+              <span class="material-icons text-6xl">
+                done
+              </span>
+            </div>
+            <span class="text-xl">STEP.3</span>
+            <p>預定成功</p>
+          </li>
+          <li class="self-center">
+            <div class="flex justify-center items-center p-7 mb-2 border-[3px] border-black rounded-full">
+              <span class="material-icons text-6xl">
+                local_post_office
+              </span>
+            </div>
+            <span class="text-xl">STEP.4</span>
+            <p>Email 付款資訊</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 產品列表 -->
+      <section class="container pb-15">
+        <select class="mb-8 pr-[10px] w-full md:max-w-[255px] rounded">
+          <option value="" selected>全部</option>
+          <option value="">床架</option>
+          <option value="">收納</option>
+          <option value="">窗簾</option>
+        </select>
+        <ul class="flex flex-wrap gap-y-6  md:gap-y-8 -mx-[15px]">
+          <li class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-[15px]">
+            <div class="relative">
+              <img src="../assets/images/JlGUkjl.png" class="w-full object-cover" alt="">
+              <span class="absolute top-3 -right-1 py-2 px-6 bg-black text-xl text-white">新品</span>
+            </div>
+            <button type="button" class="w-full py-3 bg-black text-white text-xl hover:bg-purple-light">加入購物車</button>
+            <h2 class="pt-2 mb-2 text-xl">Antony 雙人床架／雙人加大</h2>
+            <del class="text-xl">NT$18,000</del>
+            <p class="text-28px">NT$12,000</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 訂單列表 -->
+      <section class="pt-12 pb-[70px] bg-gray">
+        <h2 class="mb-8 text-28px text-center">我的購物車</h2>
+        <div class="container overflow-auto">
+          <table class="mx-auto mb-5 w-[57.5rem] text-xl text-left table-fixed">
+            <thead>
+              <tr>
+                <th class="font-normal w-[40%]">品項</th>
+                <th class="font-normal">單價</th>
+                <th class="font-normal">數量</th>
+                <th class="font-normal">金額</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="flex items-center gap-[15px] py-5">
+                  <img src="../assets/images/BefHmH2.png" alt="">
+                  <h3>Antony 雙人床架／雙人加大</h3>
+                </td>
+                <td>NT$12,000</td>
+                <td>1</td>
+                <td>NT$12,000</td>
+                <td class="text-right">
+                  <button type="button" class="material-symbols-outlined hover:text-purple text-4xl">
+                    close
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-b">
+                <td class="flex items-center gap-[15px] py-5">
+                  <img src="../assets/images/BefHmH2.png" alt="">
+                  <h3>Antony 雙人床架／雙人加大</h3>
+                </td>
+                <td>NT$12,000</td>
+                <td>1</td>
+                <td>NT$12,000</td>
+                <td class="text-right">
+                  <button type="button" class="material-symbols-outlined hover:text-purple text-4xl">
+                    close
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex justify-between items-center mx-auto w-[57.5rem]">
+            <button type="button" class="py-[10px] px-5 border border-black rounded text-xl hover:bg-black hover:text-white">
+              刪除所有品項
+            </button>
+            <p class="text-28px">
+              <span class="mr-[55px] text-xl">總金額</span>
+              NT$13,980
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 用戶資料 -->
+      <section class="container md:w-[355px] pt-15 pb-20">
+        <h2 class="mb-8 text-28px text-center">填寫預訂資料</h2>
+        <form>
+          <div class="flex flex-col gap-1.5 mb-5">
+            <label for="user">姓名</label>
+            <input type="text" id="user" class="border-[#CED4DA] rounded placeholder:text-[#818a91]" placeholder="請輸入姓名">
+          </div>
+          <div class="flex flex-col gap-1.5 mb-5">
+            <label for="tel">電話</label>
+            <input type="tel" id="tel" class="border-[#CED4DA] rounded placeholder:text-[#818a91]" placeholder="請輸入電話">
+          </div>
+          <div class="flex flex-col gap-1.5 mb-5">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="border-[#CED4DA] rounded placeholder:text-[#818a91]" placeholder="請輸入 Email">
+          </div>
+          <div class="flex flex-col gap-1.5 mb-5">
+            <label for="address">寄送地址</label>
+            <input type="text" id="address" class="border-[#CED4DA] rounded placeholder:text-[#818a91]" placeholder="請輸入寄送地址">
+          </div>
+          <div class="flex flex-col gap-1.5 mb-12">
+            <label for="payment">交易方式</label>
+            <select id="payment" class="border-[#CED4DA] rounded text-[#818a91]">
+              <option value="" selected disabled>請選擇支付方式</option>
+              <option value="ATM">ATM</option>
+              <option value="信用卡">信用卡</option>
+              <option value="超商">超商</option>
+            </select>
+          </div>
+          <button type="button" class="block py-[10px] mx-auto w-[255px] bg-black text-white rounded hover:bg-purple">送出預訂資料</button>
+        </form>
+      </section>
+
+    </main>
+
+    <script>
+      // 助教 Code
+      document.addEventListener('DOMContentLoaded', function() {
+          const ele = document.querySelector('.recommendation');
+          ele.style.cursor = 'grab';
+          let pos = { top: 0, left: 0, x: 0, y: 0 };
+          const mouseDownHandler = function(e) {
+              ele.style.cursor = 'grabbing';
+              ele.style.userSelect = 'none';
+
+              pos = {
+                  left: ele.scrollLeft,
+                  top: ele.scrollTop,
+                  // Get the current mouse position
+                  x: e.clientX,
+                  y: e.clientY,
+              };
+
+              document.addEventListener('mousemove', mouseMoveHandler);
+              document.addEventListener('mouseup', mouseUpHandler);
+          };
+          const mouseMoveHandler = function(e) {
+              // How far the mouse has been moved
+              const dx = e.clientX - pos.x;
+              const dy = e.clientY - pos.y;
+
+              // Scroll the element
+              ele.scrollTop = pos.top - dy;
+              ele.scrollLeft = pos.left - dx;
+          };
+          const mouseUpHandler = function() {
+              ele.style.cursor = 'grab';
+              ele.style.removeProperty('user-select');
+
+              document.removeEventListener('mousemove', mouseMoveHandler);
+              document.removeEventListener('mouseup', mouseUpHandler);
+          };
+          // Attach the handler
+          ele.addEventListener('mousedown', mouseDownHandler);
+      });
+    </script>
+    <script type="module" src="../assets/js/header.js"></script>
+    <script type="module" src="../assets/js/index.js"></script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
