@@ -2,6 +2,8 @@
 import axios from 'axios';
 import validate from 'validate.js';
 
+import { toast } from './sweetAlert';
+
 // API 網域、路徑
 const baseUrl = 'https://livejs-api.hexschool.io/api/livejs/v1/customer/';
 const apiPath = 'eerojslive';
@@ -59,6 +61,7 @@ const postCarts = (productId) => {
     .then((res) => {
       cartsSet = res.data;
       renderCarts(cartsSet);
+      toast('success', '新增購物車成功');
     })
     .catch((err) => {
       console.log(err);
@@ -71,6 +74,7 @@ const deleteAllCarts = () => {
   .then((res) => {
     cartsSet = res.data;
     renderCarts(cartsSet);
+    toast('warning', res.data.message);
   })
   .catch((err) => {
     console.log(err)
@@ -83,6 +87,7 @@ const deleteSingleCarts = (cartId) => {
     .then(res => {
       cartsSet = res.data
       renderCarts(cartsSet);
+      toast('warning', '已刪除商品');
     })
     .catch(err => {
       console.log(err)
@@ -94,10 +99,11 @@ const postOrder = (user) => {
   axios.post(`${baseUrl}${apiPath}/orders`, {data: {user}})
     .then(res => {
       orderForm.reset();
+      toast('success', '訂單已送出');
       getCarts();
     })
     .catch(err => {
-      console.log(err)
+      toast('error', err.response.data.message);
     })
 }
 
@@ -107,13 +113,17 @@ const renderProducts = (productsSet) => {
     .map(
       (product) => `<li class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-[15px]">
             <div class="relative">
-              <img src="${product.images}" class="w-full object-cover" alt="${product.description}">
+              <img src="${product.images}" class="w-full object-cover" alt="${
+        product.description
+      }">
               <span class="absolute top-3 -right-1 py-2 px-6 bg-black text-xl text-white">新品</span>
             </div>
-            <button type="button" class="w-full py-3 bg-black text-white text-xl hover:bg-purple-light" data-productId="${product.id}">加入購物車</button>
+            <button type="button" class="w-full py-3 bg-black text-white text-xl hover:bg-purple-light" data-productId="${
+              product.id
+            }">加入購物車</button>
             <h2 class="pt-2 mb-2 text-xl">${product.title}</h2>
-            <del class="text-xl">NT$${product.origin_price}</del>
-            <p class="text-28px">NT$${product.price}</p>
+            <del class="text-xl">NT$${numberComma(product.origin_price)}</del>
+            <p class="text-28px">NT$${numberComma(product.price)}</p>
           </li>`
     )
     .join('');
@@ -123,14 +133,18 @@ const renderProducts = (productsSet) => {
 const renderCarts = (cartsSet) => {
   const carts = cartsSet.carts;
   if (carts.length) {
-    cartsList.innerHTML = cartsSet.carts.map((cart) => `<tr class="border-b">
+    cartsList.innerHTML = cartsSet.carts
+      .map(
+        (cart) => `<tr class="border-b">
                   <td class="flex items-center gap-[15px] py-5">
-                    <img src="${cart.product.images}" class="w-20 h-20" alt="${cart.product.description}">
+                    <img src="${cart.product.images}" class="w-20 h-20" alt="${
+          cart.product.description
+        }">
                     <h3>${cart.product.title}</h3>
                   </td>
-                  <td>NT$${cart.product.price}</td>
+                  <td>NT$${numberComma(cart.product.price)}</td>
                   <td>${cart.quantity}</td>
-                  <td>NT$${cart.product.price * cart.quantity}</td>
+                  <td>NT$${numberComma(cart.product.price * cart.quantity)}</td>
                   <td class="text-right">
                     <button type="button" class="material-symbols-outlined hover:text-purple text-4xl" data-cartId="${
                       cart.id
@@ -150,7 +164,7 @@ const renderCarts = (cartsSet) => {
 // 渲染總金額
 const renderTotalPrice = () => {
   delAllCartsRow.lastElementChild.innerHTML = `<span class="mr-[55px] text-xl">總金額</span>
-    <span class="totalPrice">NT$${cartsSet.finalTotal}</span>`;
+    <span class="totalPrice">NT$${numberComma(cartsSet.finalTotal)}</span>`;
 };
 
 // 監聽產品列表
@@ -256,6 +270,13 @@ const orderValidate = () => {
     postOrder(userData)
   }
 };
+
+// 千分位換算
+function numberComma(num) {
+  let comma = /\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g;
+  return num.toString().replace(comma, ',');
+}
+
 
 // 函式初始化呼叫
 getProducts();
