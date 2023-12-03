@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>admin</title>
-    <script type="module" crossorigin src="/HexSchool-2023JavaScript-Week8/assets/admin-4d4214b3.js"></script>
-    <link rel="modulepreload" crossorigin href="/HexSchool-2023JavaScript-Week8/assets/main-6ce664c7.js">
-    <link rel="stylesheet" href="/HexSchool-2023JavaScript-Week8/assets/main-a8d8753f.css">
+    <script type="module" crossorigin src="/HexSchool-2023JavaScript-Week8/assets/admin-88cf7833.js"></script>
+    <link rel="modulepreload" crossorigin href="/HexSchool-2023JavaScript-Week8/assets/main-01784e1f.js">
+    <link rel="stylesheet" href="/HexSchool-2023JavaScript-Week8/assets/main-8d2189c7.css">
   </head>
   <body>
     <header class="relative pt-5 md:pt-10 pb-4 md:pb-9">
@@ -25,28 +25,30 @@
   </div>
 </header>    <main>
       <div class="w-full h-10 bg-black"></div>
-      <section class="container pt-15">
+      <section class="pt-15 pb-[108px]">
         <h2 class="mb-[98px] text-28px text-center">全品項營收比重</h2>
-        <div id="chartPie" class="mb-15"></div>
-        <button type="button" class="block mb-3 py-[10px] px-5 border border-black rounded ml-auto hover:bg-black hover:text-white" data-btn="delAllBtn">清除全部訂單</button>
-        <div class="overflow-auto">
-          <table class="w-full border-collapse border border-slate-400 whitespace-nowrap xl:whitespace-normal">
-            <thead>
-              <tr class="text-left [&>th]:py-3 [&>th]:px-4 whitespace-nowrap">
-                <th class="border border-black">訂單編號</th>
-                <th class="border border-black">聯絡人</th>
-                <th class="border border-black w-[15%]">聯絡地址</th>
-                <th class="border border-black w-[15%]">電子郵件</th>
-                <th class="border border-black w-3/5">訂單品項</th>
-                <th class="border border-black">訂單日期</th>
-                <th class="border border-black">訂單狀態</th>
-                <th class="border border-black text-center">操作</th>
-              </tr>
-            </thead>
-            <tbody class="adminOrderList">
-              <!-- Js 渲染畫面 -->
-            </tbody>
-          </table>
+        <div id="chartPie" class="mb-15 overflow-hidden"></div>
+        <div class="container">
+          <button type="button" class="block mb-3 py-[10px] px-5 border border-black rounded ml-auto hover:bg-black hover:text-white" data-btn="delAllBtn">清除全部訂單</button>
+          <div class="overflow-auto">
+            <table class="w-full border-collapse border border-slate-400 whitespace-nowrap xl:whitespace-normal">
+              <thead>
+                <tr class="text-left [&>th]:py-3 [&>th]:px-4 whitespace-nowrap">
+                  <th class="border border-black">訂單編號</th>
+                  <th class="border border-black">聯絡人</th>
+                  <th class="border border-black">聯絡地址</th>
+                  <th class="border border-black">電子郵件</th>
+                  <th class="border border-black">訂單品項</th>
+                  <th class="border border-black">訂單日期</th>
+                  <th class="border border-black">訂單狀態</th>
+                  <th class="border border-black text-center">操作</th>
+                </tr>
+              </thead>
+              <tbody class="adminOrderList">
+                <!-- Js 渲染畫面 -->
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>
