@@ -10,28 +10,30 @@
     <%- include('./layout/adminHeader'); -%>
     <main>
       <div class="w-full h-10 bg-black"></div>
-      <section class="container pt-15">
+      <section class="pt-15 pb-[108px]">
         <h2 class="mb-[98px] text-28px text-center">全品項營收比重</h2>
-        <div id="chartPie" class="mb-15"></div>
-        <button type="button" class="block mb-3 py-[10px] px-5 border border-black rounded ml-auto hover:bg-black hover:text-white" data-btn="delAllBtn">清除全部訂單</button>
-        <div class="overflow-auto">
-          <table class="w-full border-collapse border border-slate-400 whitespace-nowrap xl:whitespace-normal">
-            <thead>
-              <tr class="text-left [&>th]:py-3 [&>th]:px-4 whitespace-nowrap">
-                <th class="border border-black">訂單編號</th>
-                <th class="border border-black">聯絡人</th>
-                <th class="border border-black w-[15%]">聯絡地址</th>
-                <th class="border border-black w-[15%]">電子郵件</th>
-                <th class="border border-black w-3/5">訂單品項</th>
-                <th class="border border-black">訂單日期</th>
-                <th class="border border-black">訂單狀態</th>
-                <th class="border border-black text-center">操作</th>
-              </tr>
-            </thead>
-            <tbody class="adminOrderList">
-              <!-- Js 渲染畫面 -->
-            </tbody>
-          </table>
+        <div id="chartPie" class="mb-15 overflow-hidden"></div>
+        <div class="container">
+          <button type="button" class="block mb-3 py-[10px] px-5 border border-black rounded ml-auto hover:bg-black hover:text-white" data-btn="delAllBtn">清除全部訂單</button>
+          <div class="overflow-auto">
+            <table class="w-full border-collapse border border-slate-400 whitespace-nowrap xl:whitespace-normal">
+              <thead>
+                <tr class="text-left [&>th]:py-3 [&>th]:px-4 whitespace-nowrap">
+                  <th class="border border-black">訂單編號</th>
+                  <th class="border border-black">聯絡人</th>
+                  <th class="border border-black">聯絡地址</th>
+                  <th class="border border-black">電子郵件</th>
+                  <th class="border border-black">訂單品項</th>
+                  <th class="border border-black">訂單日期</th>
+                  <th class="border border-black">訂單狀態</th>
+                  <th class="border border-black text-center">操作</th>
+                </tr>
+              </thead>
+              <tbody class="adminOrderList">
+                <!-- Js 渲染畫面 -->
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>

@@ -1,12 +1,17 @@
+// 套件載入
 import axios from "axios";
+import c3 from "c3";
 
+// API 網域、路徑、key
 const baseUrl = 'https://livejs-api.hexschool.io/api/livejs/v1/admin/';
 const apiKey = 'zyHUjKJKsufh9tT1Je724rMgZnJ3';
 const apiPath = 'eerojslive';
 
+// DOM選取
 const adminOrderList = document.querySelector('.adminOrderList');
 const delAllBtn = document.querySelector('[data-btn="delAllBtn"]');
 
+// 變數宣告
 let ordersSet = [];
 
 // 取得所有訂單
@@ -98,6 +103,7 @@ const renderAdminOrders = (ordersSet) => {
                 </td>
               </tr>`}
   ).join('');
+  c3DataHandle();
 }
 
 // 監聽訂單列表
@@ -117,5 +123,37 @@ adminOrderList.addEventListener('click', (e) => {
 delAllBtn.addEventListener('click', (e) => {
   deleteAllOrder();
 })
+
+// C3資料處理
+const c3DataHandle = () => {
+  const productPrice = {};
+  ordersSet.forEach(order => {
+    order.products.forEach((product) => {
+      productPrice[product.title]
+        ? (productPrice[product.title] =
+            productPrice[product.title] + product.price)
+        : (productPrice[product.title] = product.price);
+    });
+  })
+  const productPriceSort = Object.entries(productPrice).sort((a, b) => b[1] - a[1]);
+  const c3Ary = productPriceSort.slice(0, 3);
+  const otherTotalPrice = productPriceSort.slice(3, productPrice.length).reduce((acc, cur) => acc + cur[1], 0);
+  ordersSet.length && c3Ary.push(['其他', otherTotalPrice]);
+  renderC3Chart(c3Ary);
+}
+
+// c3 圖表
+const renderC3Chart = (c3Ary) => {
+  const chart = c3.generate({
+    bindto: '#chartPie',
+    data: {
+      columns: c3Ary,
+      type: 'pie',
+    },
+    color: {
+      pattern: ['#5434A7', '#9D7FEA', '#DACBFF', '#301E5F'],
+    },
+  });
+};
 
 getAdminOrders();

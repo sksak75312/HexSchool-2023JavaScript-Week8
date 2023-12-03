@@ -20,6 +20,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.4",
     "axios": "^1.6.2",
+    "c3": "^0.7.20",
     "gh-pages": "^5.0.0",
     "glob": "^10.2.2",
     "sass": "^1.61.0",
