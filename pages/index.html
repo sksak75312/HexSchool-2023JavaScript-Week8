@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <link rel="shortcut icon" href="../assets/images/ico.ico" type="image/x-icon">
+    <title>WOWOROOM</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
@@ -24,7 +25,7 @@
       </section>
 
       <!-- 床墊優勢 -->
-      <section class="container mb-15">
+      <section id="advantage" class="container mb-15">
         <h3 class="mb-7 text-center text-28px">床墊優勢</h3>
         <ul
           class="flex justify-between items-center flex-wrap lg:flex-nowrap gap-y-8 lg:gap-y-0 md:gap-x-[30px]  text-center"
@@ -132,7 +133,7 @@
       </section>
       
       <!-- 好評推薦 -->
-      <section class="pt-15 pb-20 bg-purple-dark">
+      <section id="recommend" class="pt-15 pb-20 bg-purple-dark">
         <div class="container">
           <h3 class="mb-8 text-28px text-center text-white">好評推薦</h3>
           <div class="recommendation overflow-auto xl:overflow-hidden">
@@ -275,7 +276,7 @@
       </section>
 
       <!-- 運送方式 -->
-      <section class="container pt-8 pb-[72px] text-center">
+      <section id="transport" class="container pt-8 pb-[72px] text-center">
         <h3 class="mb-8 text-28px">運送方式</h3>
         <ul class="flex justify-center flex-col md:flex-row gap-16 xl:gap-[90px]">
           <li class="self-center">
@@ -331,7 +332,7 @@
       </section>
 
       <!-- 訂單列表 -->
-      <section class="pt-12 pb-[70px] bg-gray">
+      <section id="booking" class="pt-12 pb-[70px] bg-gray">
         <h2 class="mb-8 text-28px text-center">我的購物車</h2>
         <div class="container overflow-auto">
           <table class="mx-auto mb-5 w-[57.5rem] text-xl text-left table-fixed">

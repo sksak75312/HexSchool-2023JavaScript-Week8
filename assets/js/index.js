@@ -214,11 +214,22 @@ const orderValidate = () => {
       presence: {
         message: '為必填',
       },
+      format: {
+        pattern: /^[0-9\-\+\s]+$/,
+        message: '需要 09 開頭'
+      },
+      length: {
+        is: 10,
+        message:'長度需10碼'
+      }
     },
     信箱: {
       presence: {
         message: '為必填',
       },
+      email: {
+        message: '格式錯誤'
+      }
     },
     地址: {
       presence: {
